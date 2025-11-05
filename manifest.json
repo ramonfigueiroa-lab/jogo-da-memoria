@@ -1,12 +1,10 @@
 {
   "name": "Jogo da Memória",
   "short_name": "Memória",
-  "description": "Um divertido jogo da memória com ranking e níveis de dificuldade.",
-  "start_url": "memoria.html",
+  "start_url": "/jogo-da-memoria/",
   "display": "standalone",
-  "background_color": "#0f1724",
-  "theme_color": "#6366f1",
-  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
   "icons": [
     {
       "src": "icon-192.png",
