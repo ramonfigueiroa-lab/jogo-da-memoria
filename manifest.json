@@ -1,10 +1,10 @@
 {
-  "name": "Jogo da Memória",
-  "short_name": "Memória",
+  "name": "Jogo da Mem\u00f3ria",
+  "short_name": "Mem\u00f3ria",
   "start_url": "/jogo-da-memoria/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4a90e2",
+  "background_color": "#0f1724",
+  "theme_color": "#6366f1",
   "icons": [
     {
       "src": "icon-192.png",
