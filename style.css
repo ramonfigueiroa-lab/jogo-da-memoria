@@ -1,3 +1,34 @@
-:root{--bg1:#0f1724;--bg2:#071020;--accent:#6366f1;--muted:#9aa4b2}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#eef2ff;display:flex;justify-content:center;padding:24px}
-.wrap{width:100%;max-width:900px}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}h1{margin:0;font-size:20px}.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}button,select{font-family:inherit}button{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:#fff;cursor:pointer}.stats{display:flex;gap:16px;align-items:center;color:var(--muted)}.board{display:grid;gap:12px;margin:auto;justify-content:center}.card{position:relative;aspect-ratio:1/1;perspective:1000px}.inner{width:100%;height:100%;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.9,.3,1);border-radius:10px;cursor:pointer}.card.flipped .inner{transform:rotateY(180deg)}.face{position:absolute;inset:0;border-radius:10px;backface-visibility:hidden;overflow:hidden;display:grid;place-items:center}.front{background:#1e293b;color:var(--muted);font-size:28px}.back{transform:rotateY(180deg)}.back img{width:100%;height:100%;object-fit:cover}.ranking{display:flex;gap:16px;margin-top:18px;flex-wrap:wrap}.rank-box{background:rgba(255,255,255,0.03);padding:12px;border-radius:10px;min-width:220px;flex:1}.rank-box h3{margin:0 0 8px 0;font-size:15px}ol{margin:0;padding-left:18px;color:var(--muted)}.modal-back{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6)}.modal-back.show{display:flex}.modal{background:linear-gradient(180deg,#081225,#041022);padding:18px;border-radius:12px;min-width:300px}.modal h2{margin-top:0}.modal-row{display:flex;gap:8px;margin-top:10px}input.name{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);color:#fff}select.diff{padding:8px;border-radius:8px;background:rgba(255,255,255,0.05);color:#fff}.modal-buttons{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+}
+.card {
+  width: 100px;
+  height: 100px;
+  background: #007BFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.card img {
+  width: 90%;
+  height: 90%;
+  display: none;
+  border-radius: 10px;
+}
+.card.flipped img {
+  display: block;
+}

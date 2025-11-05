@@ -1,76 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogo da Memória</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#6366f1">
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>🧩 Jogo da Memória</h1>
-      <div class="controls">
-        <label for="difficulty">Dificuldade:</label>
-        <select id="difficulty" class="diff">
-          <option value="3x4">3x4 (fácil)</option>
-          <option value="4x4">4x4 (normal)</option>
-        </select>
-        <button id="startBtn">Iniciar jogo</button>
-        <div class="stats">
-          ⏱️ <span id="time">00:00</span> |
-          🎯 <span id="moves">0</span>
-        </div>
-        <button id="restartBtn">Reiniciar</button>
-      </div>
-    </header>
-
-    <main>
-      <div id="board" class="board" aria-live="polite"></div>
-
-      <section class="ranking" aria-label="Rankings">
-        <div class="rank-box">
-          <h3>🏆 Ranking — Tempo</h3>
-          <ol id="rank-time"></ol>
-        </div>
-        <div class="rank-box">
-          <h3>🏆 Ranking — Movimentos</h3>
-          <ol id="rank-moves"></ol>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <div id="modalBack" class="modal-back" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal" role="document">
-      <h2>🎉 Parabéns!</h2>
-      <div id="modalText">Você terminou o jogo.</div>
-      <div class="modal-row">
-        <input id="playerName" class="name" placeholder="Digite seu nome (obrigatório)" maxlength="30" />
-        <select id="whichRank" title="Salvar em" aria-label="Salvar em">
-          <option value="both">Salvar em Tempo e Movimentos</option>
-          <option value="time">Salvar só em Tempo</option>
-          <option value="moves">Salvar só em Movimentos</option>
-        </select>
-      </div>
-      <div class="modal-buttons">
-        <button id="saveBtn">Salvar</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-
+  <link rel="manifest" href="manifest.json">
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('Service Worker registrado com sucesso!'))
-          .catch(err => console.error('Erro ao registrar o Service Worker:', err));
-      });
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.log('Erro ao registrar o Service Worker', err));
     }
   </script>
+</head>
+<body>
+  <h1>🧠 Jogo da Memória</h1>
+  <div id="game-container"></div>
+  <script src="script.js"></script>
 </body>
 </html>

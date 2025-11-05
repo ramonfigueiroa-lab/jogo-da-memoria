@@ -1,10 +1,11 @@
 {
-  "name": "Jogo da Mem\u00f3ria",
-  "short_name": "Mem\u00f3ria",
-  "start_url": "/jogo-da-memoria/",
+  "name": "Jogo da Memória",
+  "short_name": "Memória",
+  "start_url": "https://ramonfigueiroa-lab.github.io/jogo-da-memoria/",
+  "scope": "https://ramonfigueiroa-lab.github.io/jogo-da-memoria/",
   "display": "standalone",
-  "background_color": "#0f1724",
-  "theme_color": "#6366f1",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
   "icons": [
     {
       "src": "icon-192.png",
