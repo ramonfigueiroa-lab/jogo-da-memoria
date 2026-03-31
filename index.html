@@ -16,7 +16,36 @@
 </head>
 <body>
   <h1>🧠 Jogo da Memória</h1>
+
+  <!-- Stats bar -->
+  <div id="stats-bar">
+    <div class="stat">
+      <span class="stat-label">Jogadas</span>
+      <span class="stat-value" id="moves-count">0</span>
+    </div>
+    <div class="stat">
+      <span class="stat-label">Tempo</span>
+      <span class="stat-value" id="timer">00:00</span>
+    </div>
+  </div>
+
+  <!-- Restart button -->
+  <button id="restart-btn">🔄 Reiniciar</button>
+
+  <!-- Game board -->
   <div id="game-container"></div>
+
+  <!-- Victory modal -->
+  <div id="victory-modal">
+    <div class="modal-box">
+      <h2>🎉 Parabéns!</h2>
+      <p>Você completou o jogo!</p>
+      <p>Jogadas: <span class="highlight" id="final-moves">-</span></p>
+      <p>Tempo: <span class="highlight" id="final-time">-</span></p>
+      <button id="play-again-btn">Jogar novamente</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
