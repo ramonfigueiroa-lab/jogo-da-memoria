@@ -184,21 +184,109 @@ h1 {
   color: #007BFF;
 }
 
-#play-again-btn {
-  margin-top: 24px;
+/* ── Ranking button (tela principal) ───────────────── */
+#ranking-btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+#ranking-btn:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ── Modal: input de nome ──────────────────────────── */
+#player-name {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#player-name:focus {
+  border-color: #007BFF;
+}
+
+/* ── Modal: botões de ação ─────────────────────────── */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+#save-score-btn, #skip-btn, #play-again-btn, #close-ranking-btn {
   background: #007BFF;
   color: #fff;
   border: none;
   border-radius: 12px;
-  padding: 12px 32px;
-  font-size: 1rem;
+  padding: 10px 24px;
+  font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.2s, transform 0.1s;
 }
 
-#play-again-btn:hover {
+#save-score-btn:hover, #play-again-btn:hover {
   background: #0056b3;
   transform: scale(1.04);
+}
+
+#skip-btn, #close-ranking-btn {
+  background: #aaa;
+}
+
+#skip-btn:hover, #close-ranking-btn:hover {
+  background: #888;
+  transform: scale(1.04);
+}
+
+/* ── Ranking list ──────────────────────────────────── */
+#ranking-list {
+  margin-top: 12px;
+  text-align: left;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.ranking-item.gold {
+  background: #fff8e1;
+  border: 1px solid #ffd700;
+}
+
+.ranking-item.new-entry {
+  background: #e8f5e9;
+  border: 1px solid #28a745;
+}
+
+.rank-pos  { font-size: 1.2rem; width: 28px; }
+.rank-name { flex: 1; font-weight: bold; }
+.rank-time { color: #007BFF; font-weight: bold; }
+.rank-moves { color: #888; font-size: 0.85rem; }
+
+.ranking-empty {
+  color: #888;
+  text-align: center;
+  padding: 16px 0;
 }
 
 /* ── Animations ────────────────────────────────────── */
